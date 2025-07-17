@@ -11,7 +11,7 @@ async function loadStandings() {
   const tbody = document.querySelector("#standings tbody");
 
   const rows = rosters.map(roster => {
-    const ownerName = userMap[roster.owner_id] || "Unknown";
+    const teamName = roster.metadata.team_name || userMap[roster.owner_id] || "Unknown";
     const { wins, losses, fpts } = roster.settings;
     return { ownerName, wins, losses, fpts };
   });
