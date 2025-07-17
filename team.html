@@ -1,28 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Team Page - ANFFL</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Fantasy Team</title>
+  <link rel="stylesheet" href="style.css">
   <script defer src="team.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: white;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #efefef;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1 id="team-name">Loading...</h1>
-    <nav><a href="index.html">← Back to Home</a></nav>
-  </header>
+  <h1 id="team-name">Loading...</h1>
+  <p>Managed by <span id="owner-name">Loading...</span></p>
 
-  <main>
-    <section>
-      <h2>Manager</h2>
-      <p id="manager-name"></p>
-    </section>
-
-    <section>
-      <h2>Roster</h2>
-      <ul id="roster-list"></ul>
-    </section>
-  </main>
+  <table id="player-table">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Position</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Player rows will be inserted here by team.js -->
+    </tbody>
+  </table>
 </body>
 </html>
