@@ -13,7 +13,7 @@ async function loadStandings() {
   const rows = rosters.map(roster => {
     const teamName = roster.metadata.team_name || userMap[roster.owner_id] || "Unknown";
     const { wins, losses, fpts } = roster.settings;
-    return { ownerName, wins, losses, fpts };
+    return { teamName, wins, losses, fpts };
   });
 
   // Optional: sort by wins then points
